@@ -1,0 +1,124 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container{
+    max-width: 1280px;
+    margin: auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100px repeat(2,1fr);
+    border: 1px solid rgb(10, 10, 10);
+}
+
+header{
+    grid-column: 1/-1;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    background-color: #227DB8;
+    color: #fff;
+    font-size: 1.8rem;
+    
+}
+
+.figura{
+    display: grid;
+    grid-template-columns: 1fr ;
+    grid-template-rows: 70px 1fr;
+    border: 1px solid rgb(10, 10, 10);
+    /* justify-content: center;
+    align-items: center; */
+}
+
+.figura h2{
+    text-align: center;
+    grid-column: 1/-1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(10, 10, 10);
+    color: #227DB8;
+    font-size: 2rem;
+}
+
+.figura-img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.figura-img img{
+    width: 70%;
+}
+
+.form-figura{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 30px 20px 100px;
+    margin: auto;
+}
+
+.form-figura label{
+    font-size: 1.6rem;
+    /* grid-column: 1/-1; */
+    text-align: center;
+}
+
+.form-figura input{
+    grid-column: 1/-1;
+    margin: 0 auto;
+}
+.form-figura .button{
+    width: 100px;
+    height: 40px;
+    border-radius: 8px;
+    background-color: #227DB8;
+    color: #fff;
+    margin: auto;
+}
+
+.cuadrado{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 70px 1fr;  
+}
+
+.cuadrado .form-figura{
+    grid-column: 2/4;
+}
+
+.triangulo{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 70px 1fr 1fr; 
+}
+
+.triangulo .figura-img{
+    grid-row: 2/4;
+}
+
+.triangulo .form-figura{
+    grid-column: 2/4;
+    grid-row: 2/4;
+}
+
+.triangulo .form-figura label{
+    grid-column: 2/3;
+    margin-left: -150px;
+    width: 300px;
+}
+
+.triangulo .form-figura input{
+    grid-column: 3/4;
+}
