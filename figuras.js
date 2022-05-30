@@ -164,17 +164,29 @@ function calcularAreaCirculo(){
 }
 
 
-// const PI = Math.PI; //Math herramienta que nos ayuda con matemáticas
+//Triangulo Isósceles
+function trianguloIso(){
+    let lado1 = document.getElementById("isoLado1");
+    let iLado1 = parseFloat(lado1.value);
 
-// function diametroCirculo(radio){
-//     return radio *2;
-// }
+    let lado2 = document.getElementById("isoLado2");
+    let iLado2 = parseFloat(lado2.value);
 
-// function perimetroCirculo(radio){
-//     const diametro = diametroCirculo(radio);
-//     return diametro * PI;
-// }
+    let base = document.getElementById("isoBase");
+    let iBase = parseFloat(base.value);
 
-// function areaCirculo(radio){
-//     return (radio * radio) * PI;
-// }
+    if(iLado1 != iLado2){
+        alert("No se puede calcular debido a que los lados son diferentes");
+    }else{
+        const pequenoLado2 = iBase /2; 
+        const pequenoBase = iLado1;
+
+        const pequenoLado2Cuadrado = pequenoLado2 * pequenoLado2;
+        const pequenoBaseCuadrado = pequenoBase * pequenoBase;
+         
+        let pequenoLado1 = Math.sqrt(pequenoBaseCuadrado - pequenoLado2Cuadrado);
+
+        const grandeAltura = pequenoLado1;
+        alert(`La altura del triangulo es: ${grandeAltura}cm`);
+    }
+}
