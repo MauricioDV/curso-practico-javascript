@@ -106,6 +106,7 @@ console.groupEnd
 
 //Aqui interactuamos con el HTML
 
+//Cuadrado
 function calcularPerimetroCuadrado(){
     const input = document.getElementById("inputCuadrado");
     const value = input.value;//Obtenemos el valor que el usuario escribio en el input
@@ -119,3 +120,61 @@ function calcularAreaCuadrado(){
     const area = areaCuadrado(value);
     alert(area);
 }
+
+//Triángulo
+function calcularPerimetroTriangulo(){
+    const input1 = document.getElementById("inputLado1");
+    const value1 = Number(input1.value);
+
+    const input2 = document.getElementById("inputLado2");
+    const value2 = Number(input2.value);
+
+    const base = document.getElementById("inputBase");
+    const value3 = Number(base.value);
+
+    const perimetro = perimetroTriangulo(value1,value2,value3);
+    alert("El perímetro del triángulo es: " + perimetro);
+}
+
+function calcularAreaTriangulo(){
+    const input1 = document.getElementById("inputBase");
+    const value1 = Number(input1.value);
+
+    const input2 = document.getElementById("inputAltura");
+    const value2 = Number(input2.value);
+
+    const area = areaTriangulo(value1, value2);
+    alert("El área del triángulo es: " + area);
+
+}
+
+function calcularPerimetroCirculo(){
+    const input = document.getElementById("inputCirculo");
+    const value = input.value;
+    const perimetro = perimetroCirculo(value);
+    alert("El perímetro del círculo es: " + perimetro);
+
+}
+
+function calcularAreaCirculo(){
+    const input = document.getElementById("inputCirculo");
+    const value = input.value;
+    const area = areaCirculo(value);
+    alert("El área del círculo es: " + area);
+}
+
+
+// const PI = Math.PI; //Math herramienta que nos ayuda con matemáticas
+
+// function diametroCirculo(radio){
+//     return radio *2;
+// }
+
+// function perimetroCirculo(radio){
+//     const diametro = diametroCirculo(radio);
+//     return diametro * PI;
+// }
+
+// function areaCirculo(radio){
+//     return (radio * radio) * PI;
+// }
